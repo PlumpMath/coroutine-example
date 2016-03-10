@@ -2,7 +2,7 @@ from kitchen import good_kitchen as kitchen
 
 
 def run_restaurant(kitchen=None, serve=None):
-    """Send requests for food to the kitchen, and serve them when they appear."""
+    """Prepare and serve each order as it comes."""
     for order in get_orders():
         food = kitchen.send(order)
         serve(food)
@@ -15,7 +15,7 @@ def get_orders():
 
 
 def fancy_serve(food):
-    """Serve an item of food to an esteemed customer."""
+    """Serve an item of food."""
     print("Here's your {}, sir/madam.".format(food))
 
 
